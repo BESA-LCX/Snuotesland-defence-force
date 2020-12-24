@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.shan:hover{
+	opacity:0.8;
+	
+}
+#fangda:hover{
+	transform:scale(1.2);
+	
+}
+#bian:hover{
+	background-color:#06F;
+	color:#FFF;
+}
+.zi{
+	text-indent: 2em;
+}
