@@ -4,9 +4,14 @@
 	opacity:0.8;
 	
 }
-#fangda:hover{
-	transform:scale(1.2);
-	
+.card:hover>img{
+	transform:translateX(20px);	
+}
+.card>img{
+	transition: all ease 1.5s;
+}
+.card{
+	overflow: hidden;
 }
 #bian:hover{
 	background-color:#06F;
@@ -14,4 +19,163 @@
 }
 .zi{
 	text-indent: 2em;
+}
+.carousel-item>img{
+	width: 100%;
+	height: 100%;
+}
+.animate-tank,.animate-plane{
+	position: fixed;
+	bottom: 0;
+	left:0;
+	width: 80px;
+	height: 40px;
+	z-index: 100;
+}
+.animate-tank{
+	animation: first 10s infinite;
+	-webkit-animation: first 10s;
+}
+.animate-plane{
+	animation: se 10s infinite;
+	-webkit-animation: se 4s;
+}
+.animate-plane i{
+	color:rgb(32, 21, 95);
+}
+.animate-tank>img{
+	width: 100%;
+	height: 100%;
+}
+@keyframes first{
+	0%{left:0}
+	50%{left:50%}
+	100%{left:100%}
+}
+@keyframes se{
+	0%{left:0}
+	50%{left:50%;bottom: 50%;}
+	100%{left:100%;bottom: 100%;}
+}
+
+@media screen and (max-width:1400px) and (min-width:1080px) {
+	.nav-link{
+		font-size: 18px;
+	}
+	.carousel-item>img{
+		width: 100%;
+		height: 100%;
+	}
+	.card>img{
+		height: 260px;
+	}
+	.carousel-item{
+		width: 100%;
+		height: 650px;
+	}
+	#tu{
+		height: 500px;
+	}
+	.float-right img{
+		width: 50px;
+		height: 50px;
+	}
+}
+@media screen and (max-width:1080px) and (min-width:768px) {
+	.nav-link{
+		font-size: 14px;
+	}
+	.carousel-item>img{
+		width: 100%;
+		height: 100%;
+	}
+	.carousel-item{
+		height: 550px;
+	}
+	.card>img{
+		height: 210px;
+	}
+	.bu>img{
+		height: 100%;
+	}
+	.bu{
+		height: 320px;
+	}
+	#tu{
+		height: 400px;
+	}
+	.tab-pane img{
+		height: 250px;
+	}
+	.zi{
+		font-size: 16px;
+	}
+	.float-right img{
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media screen and (max-width:768px) and (min-width:480px) {
+	.carousel-item>img{
+		width: 100%;
+		height: 100%;
+	}
+	.carousel-item{
+		height: 420px;
+	}
+	.card>img{
+		height: 150px;
+	}
+	.bu>img{
+		height: 100%;
+	}
+	.bu{
+		height: 270px;
+	}
+	#tu{
+		height: 300px;
+	}
+	.tab-pane img{
+		height: 200px;
+	}
+	.zi{
+		font-size: 14px;
+	}
+	.float-right img{
+		width: 30px;
+		height: 30px;
+	}
+}
+/*移动端*/
+@media screen and (max-width:480px) and (min-width:320px) {
+	.carousel-item>img{
+		width: 100%;
+		height: 100%;
+	}
+	.carousel-item{
+		height: 320px;
+	}
+	.card>img{
+		height: 160px;
+	}
+	.bu>img{
+		height: 100%;
+	}
+	.bu{
+		height: 150px;
+	}
+	#tu{
+		height: 200px;
+	}
+	.tab-pane img{
+		height: 150px;
+	}
+	.zi{
+		font-size: 12px;
+	}
+	.float-right img{
+		width: 20px;
+		height: 20px;
+	}
 }
