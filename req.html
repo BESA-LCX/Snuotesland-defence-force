@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    地址：<input type="text" id="inp" value="">
+    <br>
+    <button onclick="save()">提交</button>
+    <script>
+        var inp = document.getElementById("inp");
+        function save() {
+            //验证是否是中文
+            var pattern = new RegExp("[\u4E00-\u9FA5]+");
+            if(!pattern.test(inp.value)){
+                alert("您输入的不是中文地址，请重新输入");
+            }else{
+                alert("输入正确")
+            }
+        }
+    </script>
+</body>
+
+</html>
