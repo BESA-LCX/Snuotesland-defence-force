@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>南岛国防军最新装备采购及替换计划</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="Snuotesland defence force.css">
+</head>
+
+<body onload="init()">
+    <nav class="navbar  fixed-top navbar-light navbar-expand-lg"
+        style="opacity:0.8;background-color: rgb(241, 137, 119);">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-white" style="font-size:20px;">
+                <a href="Snuotesland defence force.html">
+                    <li class="nav-item pl-5"><img src="logo1.png" height="80px;"> </li>
+                </a>
+
+                <li class="nav-item dropdown pl-5 pt-3">
+                    <a class="nav-link text-white dropdown-toggle" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">军种</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" id="bian" href="Snuotesland Army.html">南岛陆军</a>
+                        <a class="dropdown-item" id="bian" href="Royal Snuotesland Air Force.html">南岛皇家空军</a>
+                        <a class="dropdown-item" id="bian" href="Royal Snuotesland Navy.html">南岛皇家海军</a>
+                        <a class="dropdown-item" id="bian" href="Snuotesland Marine Corps.html">南岛海军陆战队</a>
+                        <a class="dropdown-item" id="bian" href="Snuotesland Air National Guard.html">南岛空中国民警卫队</a>
+                        <a class="dropdown-item" id="bian" href="Snuotesland Coast Guard.html">南岛海岸警卫队</a>
+
+                    </div>
+
+                </li>
+                <li class="nav-item  pl-4 pt-3">
+                    <a class="nav-link text-white" href="Military News.html">新闻</a>
+                </li>
+                <li class="nav-item  pl-4 pt-3">
+                    <a class="nav-link text-white" href="">军工企业</a>
+                </li>
+                <li class="nav-item  pl-4 pt-3">
+                    <a class="nav-link text-white" href="">战绩历史</a>
+                </li>
+                <li class="nav-item  pl-4 pt-3">
+                    <a class="nav-link text-white" href="Overseas_Garrison.html">海外驻军</a>
+                </li>
+                <li class="nav-item  pl-4 pt-3">
+                    <form class="form-inline  my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-info  my-2 my-sm-0" type="submit">搜索</button>
+                    </form>
+
+                <li class="nav-item dropdown pl-5 pt-3">
+                    <a class="nav-link text-white active dropdown-toggle" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">中文</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">英文</a>
+
+                    </div>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+
+
+    </nav>
+    <img src="news_picture/orderbanner.jpg" class="figure" alt="" width="100%" height="600">
+    <h4 class="text-center mt-2">南岛国防军最新装备采购及替换计划</h4>
+    <table class="w-100" id="order-evn-table">
+        <thead>
+            <tr>
+                <th>采购型号</th>
+                <th>代号</th>
+                <th>类型</th>
+                <th>数量</th>
+                <th>生产商</th>
+                <th>替换型号</th>
+                <th>替换类型</th>
+                <th>替换数量</th>
+                <th>归属</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tbody id="tableData">
+
+        </tbody>
+    </table>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        /*采购型号 采购类型 采购数量 生产商 替换型号 替换类型 替换数量 归属 状态*/
+        let order_evns = [
+            {
+                id: "E-7A",
+                name: "楔尾",
+                type: "预警机",
+                count: 17,
+                company: "美国-波音公司",
+                replaceId: "E-3C",
+                replaceType: "预警机",
+                replaceCount: 27,
+                status: "生产中",
+                to: "南岛皇家空军"
+            },
+            {
+                id: "E-2D",
+                name: "超级鹰眼",
+                type: "预警机",
+                count: 12,
+                company: "美国-洛斯罗普格鲁曼公司",
+                replaceId: "E-2C",
+                replaceType: "预警机",
+                replaceCount: 12,
+                status: "交付3架，9架生产中",
+                to: "南岛皇家海军"
+            },
+            {
+                id: "F-35C",
+                name: "闪电II",
+                type: "第五代隐身联合攻击战斗机",
+                count: 24,
+                company: "美国-洛克希德·马丁公司",
+                replaceId: "-",
+                replaceType: "-",
+                replaceCount: 0,
+                status: "交付16架，8架生产中",
+                to: "南岛皇家海军"
+            },
+            {
+                id: "LC-005 block II",
+                name: "台风之狮",
+                type: "超音速多用途战斗攻击机",
+                count: 30,
+                company: "南岛-BESA",
+                replaceId: "-",
+                replaceType: "-",
+                replaceCount: 0,
+                status: "交付19架，11架生产中",
+                to: "南岛空中国民警卫队"
+            },
+            {
+                id: "HHLZ-X",
+                name: "'光影'量子反导系统",
+                type: "防空反导系统",
+                count: 6,
+                company: "南岛-联合宇航公司",
+                replaceId: "-",
+                replaceType: "-",
+                replaceCount: 0,
+                status: "交付3架，3架生产中",
+                to: "南岛陆军"
+            },
+            {
+                id: "Typhoon block III",
+                name: "台风",
+                type: "超音速高机动性多用途战机",
+                count: 60,
+                company: "欧洲-航天航空防务系统公司",
+                replaceId: "F-15C/D/J/DJ",
+                replaceType: "超音速高机动全天候空中优势战机",
+                replaceCount: 120,
+                status: "计划阶段（46+60架台风替换全部F-15C/D系列）",
+                to: "南岛皇家空军"
+            },
+            {
+                id: "A330 MRRT",
+                name: "-",
+                type: "空中加油机",
+                count: 45,
+                company: "欧洲-空中客车公司",
+                replaceId: "KC-135R",
+                replaceType: "空中加油机",
+                replaceCount: 72,
+                status: "计划阶段",
+                to: "南岛皇家空军"
+            },
+            {
+                id: "RZ-G1",
+                name: "尤斯塔斯",
+                type: "无人多功能战车",
+                count: 210,
+                company: "南岛-通用动力公司",
+                replaceId: "-",
+                replaceType: "-",
+                replaceCount: 0,
+                status: "交付完毕",
+                to: "南岛陆军"
+            },
+            {
+                id: "SX-4000B",
+                name: "黑雕",
+                type: "隐身无人攻击舰载机",
+                count: 40,
+                company: "南岛-BESA",
+                replaceId: "-",
+                replaceType: "-",
+                replaceCount: 0,
+                status: "已交付18架，剩余22架生产中",
+                to: "南岛皇家海军"
+            },
+            {
+                id: "BlueSkyGod",
+                name: "蓝天之神",
+                type: "空天母舰",
+                count: 1,
+                company: "南岛-德利特伦墨斯造船船坞公司",
+                replaceId: "-",
+                replaceType: "-",
+                replaceCount: 0,
+                status: "生产中",
+                to: "南岛皇家海军"
+            },
+
+        ];
+
+        function init() {
+            document.getElementById("tableData").innerHTML += "";
+            let tr = "";
+            order_evns.forEach((item, index) => {
+                /*隔行变色*/
+                 //奇数行=偶数下标
+                if(index % 2===0){
+                    tr = `<tr class='tb-info'><td class='evn-id'>${item.id}</td><td>${item.name}</td><td>${item.type}</td><td>${item.count}</td><td>${item.company}</td><td>${item.replaceId}</td><td>${item.replaceType}</td><td>${item.replaceCount}</td><td class='text-warning'>${item.to}</td><td>${item.status}</td></tr>`;
+                }
+                 //偶数行=奇数下标
+                else{
+                    tr = `<tr class='tb-orang'><td class='evn-id'>${item.id}</td><td>${item.name}</td><td>${item.type}</td><td>${item.count}</td><td>${item.company}</td><td>${item.replaceId}</td><td>${item.replaceType}</td><td>${item.replaceCount}</td><td class='text-warning'>${item.to}</td><td>${item.status}</td></tr>`;
+                }
+               
+                document.getElementById("tableData").innerHTML += tr;
+            })
+        }
+
+    </script>
+</body>
+
+</html>

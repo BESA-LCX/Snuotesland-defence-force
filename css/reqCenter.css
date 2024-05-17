@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: rgb(238, 238, 238);
+}
+#top{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(97, 11, 110);
+}
+.nav-l,.nav-r{
+    width: 100%;
+}
+.nav-l{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 25%;
+}
+.nav-l>img{
+    width: 50%;
+    height: 100%;
+}
+.nav-r{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+.nav-r-item{
+   height: 100%;
+}
+.nav-r-item:hover{
+   border-bottom:3px solid rgb(233, 89, 11);
+}
+.active-link{
+    border-bottom:3px solid rgb(233, 89, 11);
+}
+.nav-link{
+    display: block;
+    color: white;
+    font-size: 14px;
+    line-height: 60px;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.tab-pane{
+    margin-top: 20px;
+}
+.tab-pane-title{
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(214, 213, 215);
+}
+.card-title{
+    margin-top: 20px;
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(97, 11, 110);
+    border-radius: 0px 20px 20px 0px;
+    color: white;
+}
+.evn-card-group{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+.evn-card{
+    height: 250px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(214, 213, 215);
+}
+.evn-card-header,.evn-card-body{
+    width: 100%;
+}
+.evn-card-header{
+    height: 65%;
+}
+.evn-card-header>img{
+    width: 100%;
+    height: 100%;
+}
+.evn-card-body{
+    height: 35%;
+}
+.evn-card-content{
+    padding: 10px;
+}
+.evn-card p{
+    font-size: 12px;
+}
+.text-orang{
+    color: rgb(233, 89, 11);
+}

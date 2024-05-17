@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南岛国防军武器装备中心</title>
+    <link rel="stylesheet" href="css/reqCenter.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav id="top">
+            <div class="nav-l"><img src="logo1.png" alt=""></div>
+            <div class="nav-r">
+                <div :class="[activeIndex===item.index ? 'nav-r-item active-link':'nav-r-item']" v-for="(item) in bars"
+                    :key="item.index" @click="turnBar(item.index)">
+                    <a href="javascript:;" class="nav-link">{{item.name}}</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="tab-pane" v-show="show1">
+                <div class="tab-pane-title">
+                    <h3>南岛陆军力量</h3>
+                    <h6>南岛陆军现役装备472辆坦克 940辆战车 311辆自行火炮 294架直升机 97套防空反导系统 4套陆用“战斧”式巡航导弹发射系统 拥有少量的核弹。南岛陆军包括：步兵 装甲部队 工程部队
+                        火炮部队 通讯部队 陆军航空兵 医疗部队 后勤保障部队 核战略部队 防空反导部队 特种部队；</h6>
+                </div>
+                <h6 class="card-title">坦克</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnArmy.tank" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 辆</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">装甲战车</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnArmy.armored_vehicle" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 辆</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">自行火炮</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnArmy.self_propelled_artillery" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 辆</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">直升机</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnArmy.helicopter" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">防空反导系统</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnArmy.air_defense_system" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 套</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" v-show="show2">
+                <div class="tab-pane-title">
+                    <h3>南岛皇家空军力量</h3>
+                    <h6>北约第二大空中力量。装备1700余架作战飞机。战斗机840架、电子战机119架、攻击机120架、预警机73架、加油机119架、运输机92架、无人机407架。实战经验丰富；训练水平优异、是世界上除美国以外的装备最现代化的空中武装力量，空军作战实力位居全球第二。</h6>
+                </div>
+                <h6 class="card-title">战斗机</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnAirForce.fighter" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">电子战机</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnAirForce.Electronic_warfare_aircraft" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">攻击机</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnAirForce.Attackers" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">预警机</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnAirForce.AWACS" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">加油机</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnAirForce.Fuel_dispenser" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">运输机</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnAirForce.transport" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">无人机</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnAirForce.drone" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" v-show="show3">
+                <div class="tab-pane-title">
+                    <h3>南岛皇家海军</h3>
+                    <h6>南岛皇家海军拥有5.5万兵力。装备106艘舰艇 300余架飞机 下属包括：海上舰队 海军航空兵 反潜部队 海军陆战队 岸防部队。是一支区域作战的世界先进海军。</h6>
+                </div>
+                <h6 class="card-title">航空母舰</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.aircraft_carrier" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>类级：{{item.className}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 艘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">导弹驱逐舰</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.destroyer" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>类级：{{item.className}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 艘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">导弹护卫舰</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.frigate" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>类级：{{item.className}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 艘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">导弹巡洋舰</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.cruiser" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>类级：{{item.className}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 艘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">潜艇</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.submarine" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>类级：{{item.className}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 艘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">两栖登陆输送舰</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.Amphibious_landing_transport_ship" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>类级：{{item.className}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 艘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">扫雷舰</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.minesweeper" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>类级：{{item.className}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 艘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">辅助舰船</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.Auxiliary_ships" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <p>{{item.type}}</p>
+                                <p>数量：{{item.count}} 艘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="card-title">皇家海军航空兵</h6>
+                <div class="evn-card-group">
+                    <div class="evn-card" v-for="item in evnNavy.Naval_aviation" :key="item.id">
+                        <div class="evn-card-header"><img :src="item.img_src" alt=""></div>
+                        <div class="evn-card-body">
+                            <div class="evn-card-content">
+                                <h3 class="text-orang">{{item.id}}</h3>
+                                <p>代号：{{item.name}}</p>
+                                <p>类型：{{item.type}}</p>
+                                <p>数量：{{item.count}} 架</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane" v-show="show4">4</div>
+            <div class="tab-pane" v-show="show5">5</div>
+            <div class="tab-pane" v-show="show6">6</div>
+        </div>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/reqCenter.js"></script>
+
+</body>
+
+</html>

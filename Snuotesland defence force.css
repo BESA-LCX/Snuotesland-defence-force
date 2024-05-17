@@ -179,3 +179,29 @@
 		height: 20px;
 	}
 }
+
+#order-evn-table{
+	border-collapse: collapse;
+}
+#order-evn-table th{
+	background-color: rgb(26, 25, 25);
+	color: white;
+}
+#order-evn-table th,#order-evn-table td{
+	padding: 8px;
+	text-align: center;
+	font-size: 12px;
+}
+#order-evn-table,#order-evn-table tr{
+	border: 1px solid rgb(237, 237, 237);
+}
+.tb-orang{
+ background-color: rgb(246, 231, 221);
+}
+.tb-info{
+	background-color: rgb(243, 243, 243);
+}
+.evn-id{
+	font-weight: bold;
+	color: rgb(19, 212, 212);
+}
