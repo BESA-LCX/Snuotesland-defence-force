@@ -58,7 +58,6 @@ let app = new Vue({
           { id: "XHG2", name: "", type: "陆基电磁防空炮", count: 26, img_src: "picture_army/%E9%99%86%E5%9F%BA%E7%94%B5%E7%A3%81%E9%98%B2%E7%A9%BA%E7%82%AE.jpg" },
           { id: "XHG1", name: "", type: "陆基激光防空炮", count: 20, img_src: "picture_army/%E9%99%86%E5%9F%BA%E6%BF%80%E5%85%89%E9%98%B2%E7%A9%BA%E7%82%AE.jpg" },
           { id: "PAC-3", name: "爱国者III", type: "反导系统", count: 9, img_src: "picture_army/PAC-3.jpg" },
-          { id: "PAC-2", name: "爱国者II", type: "防空系统", count: 4, img_src: "picture_army/PAC-2.jpg" },
         ]
       },
       //南岛皇家空军装备
@@ -94,7 +93,7 @@ let app = new Vue({
         ],
         //预警机
         AWACS: [
-          { id: "E-7A", name: "楔尾", type: "预警机", count: 2, img_src: "https://imgproc.airliners.net/photos/airliners/1/5/9/4935951.jpg?v=v4658ee64865" },
+          { id: "E-7A", name: "楔尾", type: "预警机", count: 3, img_src: "https://imgproc.airliners.net/photos/airliners/1/5/9/4935951.jpg?v=v4658ee64865" },
           { id: "E-3C", name: "望楼", type: "预警机", count: 27, img_src: "picture_air/E-3.jpg" },
           { id: "E-2C", name: "鹰眼", type: "预警机", count: 44, img_src: "picture_air/E-2C.jpg" },
         ],
