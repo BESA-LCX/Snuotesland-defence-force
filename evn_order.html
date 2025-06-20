@@ -75,7 +75,7 @@
 
     </nav>
     <img src="news_picture/orderbanner.jpg" class="figure" alt="" width="100%" height="600">
-    <h4 class="text-center mt-2">南岛国防军最新装备采购及替换计划</h4>
+    <h4 class="text-center mt-2">南岛国防军最新装备采购/升级及替换计划</h4>
     <table class="w-100" id="order-evn-table">
         <thead>
             <tr>
@@ -100,6 +100,18 @@
     <script>
         /*采购型号 采购类型 采购数量 生产商 替换型号 替换类型 替换数量 归属 状态*/
         let order_evns = [
+           {
+                id: "F-15SL（F-15EX南岛版）",
+                name: "究极皇牌鹰",
+                type: "超音速多用途空中优势战斗轰炸机",
+                count: 42,
+                company: "美国-波音公司",
+                replaceId: "F-15SN/F-15SG/-F15I",
+                replaceType: "超音速多用途战斗轰炸机",
+                replaceCount: 42,
+                status: "计划阶段（F-15SN/F-15SG/F15I全部升级为F-15EX标准，型号为：F-15SL）",
+                to: "南岛皇家空军"
+            },
             {
                 id: "E-7A",
                 name: "楔尾",
@@ -109,7 +121,7 @@
                 replaceId: "E-3C",
                 replaceType: "预警机",
                 replaceCount: 27,
-                status: "生产中",
+                status: "已交付4架，13架生产中",
                 to: "南岛皇家空军"
             },
             {
@@ -121,7 +133,7 @@
                 replaceId: "E-2C",
                 replaceType: "预警机",
                 replaceCount: 12,
-                status: "交付3架，9架生产中",
+                status: "交付5架，7架生产中",
                 to: "南岛皇家海军"
             },
             {
@@ -135,30 +147,6 @@
                 replaceCount: 0,
                 status: "交付16架，8架生产中",
                 to: "南岛皇家海军"
-            },
-            {
-                id: "LC-005 block II",
-                name: "台风之狮",
-                type: "超音速多用途战斗攻击机",
-                count: 30,
-                company: "南岛-BESA",
-                replaceId: "-",
-                replaceType: "-",
-                replaceCount: 0,
-                status: "交付19架，11架生产中",
-                to: "南岛空中国民警卫队"
-            },
-            {
-                id: "HHLZ-X",
-                name: "'光影'量子反导系统",
-                type: "防空反导系统",
-                count: 6,
-                company: "南岛-联合宇航公司",
-                replaceId: "-",
-                replaceType: "-",
-                replaceCount: 0,
-                status: "交付3架，3架生产中",
-                to: "南岛陆军"
             },
             {
                 id: "Typhoon block III",
@@ -176,25 +164,13 @@
                 id: "A330 MRRT",
                 name: "-",
                 type: "空中加油机",
-                count: 45,
+                count: 42,
                 company: "欧洲-空中客车公司",
                 replaceId: "KC-135R",
                 replaceType: "空中加油机",
                 replaceCount: 72,
                 status: "计划阶段",
                 to: "南岛皇家空军"
-            },
-            {
-                id: "RZ-G1",
-                name: "尤斯塔斯",
-                type: "无人多功能战车",
-                count: 210,
-                company: "南岛-通用动力公司",
-                replaceId: "-",
-                replaceType: "-",
-                replaceCount: 0,
-                status: "交付完毕",
-                to: "南岛陆军"
             },
             {
                 id: "SX-4000B",
@@ -205,7 +181,7 @@
                 replaceId: "-",
                 replaceType: "-",
                 replaceCount: 0,
-                status: "已交付18架，剩余22架生产中",
+                status: "已交付20架，剩余20架生产中",
                 to: "南岛皇家海军"
             },
             {
